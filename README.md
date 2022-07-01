@@ -17,4 +17,9 @@
 - Diana DeGette won the election with 73.8% of the vote at 272,892 votes in total.
 
 ## Election Audit Summary
- 
+ It's important to note that the script used for this election audit is versitile enough to be used in any election in the future.  For example, the code that's used to track the candidate names and vote totals can be changed to accommodate candidates of whatever election is being done.  The only thing that needs be changed for that is to change the code below
+ ```
+ with open(file_to_load) as election_data:
+    reader = csv.reader(election_data)
+ ```
+to whatever file is holding the election data.  The scripts can also be changed in a way to keep track of states rather than counties by changing the county code into storing state names rather than just counties.
